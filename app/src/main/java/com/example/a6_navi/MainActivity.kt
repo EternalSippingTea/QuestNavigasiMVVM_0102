@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             _6_NaviTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
+                    (
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
