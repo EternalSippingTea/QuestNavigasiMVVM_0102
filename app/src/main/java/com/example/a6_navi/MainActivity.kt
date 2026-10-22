@@ -5,14 +5,10 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import com.example.a6_navi.ui.theme._6_NaviTheme
-import com.example.a6_navi.view.FormIsian
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,15 +16,13 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             _6_NaviTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    FormIsian(
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
+                    DataApp()
                 }
             }
         }
     }
 }
-
-
-
