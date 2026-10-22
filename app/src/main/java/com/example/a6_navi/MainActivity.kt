@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.a6_navi.ui.theme._6_NaviTheme
+import com.example.a6_navi.view.FormIsian
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +21,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             _6_NaviTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    (
+                    FormIsian(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
